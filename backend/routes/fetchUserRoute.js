@@ -2,8 +2,6 @@ const express = require("express");
 const fetchUser = require("../controllers/fetchUser");
 const Router = express.Router();
 
+Router.post("/", fetchUser);
 
-Router.post("/",fetchUser);
-
-
-module.exports = Router
+module.exports = Router;

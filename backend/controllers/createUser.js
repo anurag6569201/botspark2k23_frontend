@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const User = require("../db/schema/user");
 
 const createUser = async (req, res, next) => {
