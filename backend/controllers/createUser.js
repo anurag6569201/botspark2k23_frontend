@@ -10,6 +10,7 @@ const createUser = async (req, res, next) => {
     phone,
     bloodGrp,
     collegeName,
+    sessionID: "ID",
   });
 
   try {

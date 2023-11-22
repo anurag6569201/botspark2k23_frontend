@@ -3,6 +3,7 @@ const port = 3000;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const connect = require("./db/connection/connect");
+const createUserRoute = require("./routes/createUserRoute")
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
@@ -12,7 +13,7 @@ connect();
 app.use("/test_end",createUserRoute)
 
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.send("Hello!");
 });
 
 
