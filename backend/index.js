@@ -14,12 +14,6 @@ connect();
 app.use("/test_end",createUserRoute)
 app.use("/find", fetchUserRoute)
 
-app.get("/", (req, res) => {
-  res.send("Hello!");
-});
-
-
-
 app.listen(port,()=>{
   console.log(`${port}`);
 })
