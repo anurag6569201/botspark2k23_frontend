@@ -21,7 +21,6 @@
       agHeight = $(window).height(),
       f = -1,
       agFlag = false;
-
     function fnOnScroll() {
       agPosY = $(window).scrollTop();
 

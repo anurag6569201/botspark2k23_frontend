@@ -2,7 +2,15 @@ html,
 body {
   background-color: #000;
   overflow-x: hidden;
-  font-size: 10px;
+  font-size: 9px;
+}
+@font-face {
+  font-family: 'DaMiOne';
+  src: url('../font/DaMiOne-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'BrunoAce';
+  src: url('../font/BrunoAce-Regular.ttf') format('truetype');
 }
 .other{
     width: 100%;
@@ -164,11 +172,14 @@ body {
     justify-content: right;
 }
 .timeline-card_desc .timeline_heading{
+  font-family: 'DaMiOne', sans-serif;
     font-size: 3em;
     border-bottom: 0.1em solid rgb(255, 255, 255);
     padding: .2em 1em 0.2em 0.3em;
 }
-
+.timeline-card_desc h3{
+  font-family: 'BrunoAce', sans-serif;
+}
 .timeline_timespan_content{
     height: 100%;
     background-color: transparent;
@@ -176,6 +187,7 @@ body {
     flex-direction: column;
 }
 .timeline-card_desc .timespan{
+  font-family: 'DaMiOne', sans-serif;
     font-size:3em;
     border: none;
     display: flex;
@@ -183,6 +195,7 @@ body {
     justify-content: center;
   }
   .timeline-card_desc a{
+    font-family: 'BrunoAce', sans-serif;
     padding: 1.2em 2.4em;
     border-radius: 2em;
     text-decoration: none;
@@ -230,16 +243,17 @@ body {
 .merch_content{
     padding: 4em 2em;
     position: relative;
-    overflow: hidden;
 }
 
 .merch_text span{
+  font-family: 'DaMiOne', sans-serif;
     color: white;
     font-weight: 700;
     font-size: 4em;
 }
 .merch_text p{
     color: white;
+    font-family: 'BrunoAce', sans-serif;
     font-size: 2em;
 }
 .merch_button{
@@ -252,6 +266,7 @@ body {
     overflow: hidden;
 }
 .merch_button a{
+  font-family: 'BrunoAce', sans-serif;
     padding: 1em 1.6em;
     border-radius:3em;
     color: white;
@@ -313,6 +328,7 @@ body {
 }
 .sponser_content{
   padding: 10em 0 7em 10em;
+  font-family: 'DaMiOne', sans-serif;
 }
 .sponser_txt2,
 .sponser_txt1{
@@ -384,10 +400,12 @@ body {
   overflow: hidden;
 }
 .contact_content span{
+  font-family: 'DaMiOne', sans-serif;
   font-size: 8em;
   color: blue;
 }
 .contact_content p{
+  font-family: 'BrunoAce', sans-serif;
   padding: 1em;
   font-size: 3em;
   color: rgb(255, 255, 255);
@@ -400,6 +418,7 @@ body {
   padding: 2em;
 }
 .contact_button a{
+  font-family: 'BrunoAce', sans-serif;
   color: white;
   background-color: blue;
   font-size: 2.5em;
@@ -498,6 +517,7 @@ body {
   .timeline_item:nth-child(2n+1) .timeline-card_item,
   .timeline_item:nth-child(2n) .timeline-card_item {
     transform: translateX(0);
+    font-size: 8px;
   }
 
   .timeline_item:nth-child(2n+1) .timeline-card_arrow {
@@ -514,20 +534,26 @@ body {
   }
 
   .merch_button{
-    font-size: 7px;
+    font-size: 5px;
   }
   .merch{
     font-size: 7px;
   }
   .sponser{
-    font-size: 7px;
+    font-size: 5px;
+  }
+  .contact_content{
+    font-size: 5.4px;
+  }
+  .timespan img{
+    scale: .6;
   }
 }
 
 
 @media only screen and (max-width: 639px) {
   html,body{
-      font-size: 7px;
+      font-size: 5px;
   }
 .timeline-card_info {
   padding: 1em 1.5em;
@@ -536,7 +562,7 @@ body {
   margin-top: 1em;
 }
 .timeline-card_desc {
-  font-size: 1.4em;
+  font-size: 8px;
 }
 .wrapper{
   padding-left: 0;
@@ -552,7 +578,7 @@ body {
   font-size: 1.2em;
 }
 .timespan img{
-  scale: 0.8;
+  scale: 0.4;
 }
 .timeline_line{
   width: 0.7em;
@@ -567,8 +593,10 @@ body {
   font-size: 5px;
 }
 .sponser_content{
-  font-size: 5px;
+  font-size: 3.5px;
   padding-left: 0em;
+}.contact_content{
+  font-size: 4.5px;
 }
 }
 @media only screen and (max-width: 470px){
@@ -585,8 +613,11 @@ html,body{
   font-size: 4px;
 }
 .sponser_content{
-  font-size: 4px;
+  font-size: 2.8px;
   padding-left: 0em;
+}
+.contact_content{
+  font-size: 3.7px;
 }
 }
 @media only screen and (max-width: 400px){
@@ -603,7 +634,10 @@ html,body{
   font-size: 3px;
 }
 .sponser_content{
-  font-size: 3px;
+  font-size: 2.2px;
   padding-left: 0em;
+}
+.contact_content{
+  font-size: 3px;
 }
 }
