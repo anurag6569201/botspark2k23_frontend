@@ -52,7 +52,7 @@
       a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
       n = agPosY - a + agOuterHeight / 2;
       i <= agPosY + agOuterHeight / 2 && (n = i - a);
-      agTimelineLineProgress.css({height: n + "px"});
+      agTimelineLineProgress.css({ height: n + "px" });
 
       agTimelineItem.each(function () {
         var agTop = $(this).find(agTimelinePoint).offset().top;
@@ -70,14 +70,14 @@
   });
 })(jQuery);
 
-window.addEventListener('scroll', function() {
-    var element = document.getElementById('timeline-card');
-    var scrollPosition = window.scrollY || window.pageYOffset;
+window.addEventListener('scroll', function () {
+  var element = document.getElementById('timeline-card');
+  var scrollPosition = window.scrollY || window.pageYOffset;
 
-    var opacity = 1 - scrollPosition / 500;
+  var opacity = 1 - scrollPosition / 500;
 
-    element.style.opacity = opacity > 0 ? opacity : 0;
-  });
+  element.style.opacity = opacity > 0 ? opacity : 0;
+});
 
 
 
@@ -89,6 +89,6 @@ const marqueeContent = document.querySelector("ul.marquee-content");
 
 root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-for(let i=0; i<marqueeElementsDisplayed; i++) {
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
