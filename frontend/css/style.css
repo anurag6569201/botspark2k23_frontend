@@ -333,15 +333,15 @@ body {
 
 /* merch */
 .merch {
-  max-width: 100%;
+  max-width: 75%;
   height: 46em;
   overflow: hidden;
   display: flex;
   background-color: rgba(125, 125, 125, 0.15);
   padding: 4em;
-  border: 2px solid #878789;
+  border: 3px solid #878789;
   border-radius: 2em;
-  margin-top: 15em;
+  margin: 15em auto 0;
 }
 
 .merch_content,
@@ -365,6 +365,7 @@ body {
 }
 
 .merch_text p {
+  margin-top: 4px;
   color: white;
   font-family: 'BrunoAce', sans-serif;
   font-size: 2em;
@@ -437,7 +438,7 @@ body {
 
 
 .sponser {
-  height: auto;
+  height: 46em;
   padding: 4em;
   background-color: transparent;
   display: flex;
@@ -447,7 +448,8 @@ body {
 }
 
 .sponser_content {
-  width: 55%;
+  width: 50%;
+  margin-left: 5%;
   background-color: transparent;
 }
 
@@ -457,7 +459,6 @@ body {
 }
 
 .sponser_content {
-  padding: 10em 0 7em 10em;
   font-family: 'DaMiOne', sans-serif;
 }
 
@@ -469,7 +470,7 @@ body {
 
 .sponser_txt2 span,
 .sponser_txt1 span {
-  font-size: 8em;
+  font-size: 7em;
   color: white;
 }
 
@@ -479,6 +480,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.slider::before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(black, transparent 10%, transparent 90%, black);
+  pointer-events: none; /* So it doesn't interfere with slider interaction */
 }
 
 .slider {
@@ -521,6 +534,7 @@ body {
 
 /* contact */
 .contact {
+  margin: 0 20% 0 20%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,15 +551,16 @@ body {
 
 .contact_content span {
   font-family: 'DaMiOne', sans-serif;
-  font-size: 8em;
-  color: blue;
+  font-size: 5em;
+  font-weight: 700;
+  color: #176bcf;
 }
 
 .contact_content p {
   font-family: 'BrunoAce', sans-serif;
   padding: 1em;
-  font-size: 3em;
-  color: rgb(255, 255, 255);
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.821);
 }
 
 .contact_button {
@@ -559,8 +574,8 @@ body {
 .contact_button a {
   font-family: 'BrunoAce', sans-serif;
   color: white;
-  background-color: blue;
-  font-size: 2.5em;
+  background-color: #176acf85;
+  font-size: 2em;
   text-decoration: none;
   padding: .6em 1.5em;
 }
