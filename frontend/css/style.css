@@ -64,6 +64,7 @@ body {
   color: white;
   text-align: left;
   margin: auto;
+  animation: slide-in 1s ease-in-out;
   transform: translate(15%, 60%);
 }
 
@@ -80,19 +81,49 @@ body {
 
 .hero-img-1 {
   transform: translate(100%, 10%);
+  animation: robo-slide-in1 1s ease-in-out;
 }
 
 .hero-img-2 {
   transform: translate(-60%, 10%);
+  animation: robo-slide-in2 1s ease-in-out;
 }
 
-.ellipse-hero {
+.ellipse {
   z-index: 1;
   position: absolute;
   width: 100%;
   height: 700px;
   border-radius: 50%;
   background: radial-gradient(50% 50% at 50% 50%, rgb(0, 50, 151) 0%, rgba(0, 50, 151, 0) 92.71%);
+}
+
+.ellipse1 {
+  z-index: 1;
+  position: absolute;
+  width: 60%;
+  height: 500px;
+  transform: translate(-20%, 0);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 50, 151, 0.450) 0%, rgba(0, 50, 151, 0) 96.71%);
+}
+
+.ellipse2 {
+  z-index: 1;
+  position: absolute;
+  width: 60%;
+  height: 500px;
+  align-items: end;
+  transform: translate(-40%, 30%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 50, 151, 0.450) 0%, rgba(0, 50, 151, 0) 96.71%);
+}
+
+.ellipse-merch {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  transform: translate(-40%, 0);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 50, 151, 0.21) 0%, rgba(0, 50, 151, 0) 92.71%);
 }
 
 @keyframes slide {
@@ -158,6 +189,7 @@ body {
 }
 
 .timeline_item {
+  z-index: 2;
   margin: 0 0 5em;
   position: relative;
 }
@@ -403,6 +435,7 @@ body {
 
 /* merch */
 .merch {
+  z-index: 2;
   max-width: 75%;
   height: 46em;
   overflow: hidden;
@@ -416,6 +449,7 @@ body {
 
 .merch_content,
 .merch_image {
+  z-index: 2;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -423,11 +457,13 @@ body {
 }
 
 .merch_content {
+  z-index: 2;
   padding: 4em 2em;
   position: relative;
 }
 
 .merch_text span {
+  z-index: 2;
   font-family: 'DaMiOne', sans-serif;
   color: white;
   font-weight: 700;
@@ -435,6 +471,7 @@ body {
 }
 
 .merch_text p {
+  z-index: 2;
   margin-top: 4px;
   color: white;
   font-family: 'BrunoAce', sans-serif;
@@ -442,6 +479,7 @@ body {
 }
 
 .merch_button {
+  z-index: 2;
   width: 100%;;
   height: max-content;
   position: absolute;
@@ -506,6 +544,14 @@ body {
 }
 
 
+.ellipse-sponsor {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  transform: translate(-40%, 0);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 50, 151, 0.329) 0%, rgba(0, 50, 151, 0) 92.71%);
+}
 
 .sponser {
   height: 46em;
@@ -518,6 +564,7 @@ body {
 }
 
 .sponser_content {
+  z-index: 2;
   width: 50%;
   margin-left: 5%;
   background-color: transparent;
@@ -691,6 +738,35 @@ body {
   }
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translate(-100%, 60%);
+  }
+
+  100% {
+    transform: translate(15%, 60%);
+  }
+}
+
+@keyframes robo-slide-in1 {
+  0% {
+    transform: translate(150%, 10%);
+  }
+
+  100% {
+    transform: translate(100%, 10%);
+  }
+}
+
+@keyframes robo-slide-in2 {
+  0% {
+    transform: translate(10%, 10%);
+  }
+
+  100% {
+    transform: translate(-60%, 10%);
+  }
+}
 
 
 
