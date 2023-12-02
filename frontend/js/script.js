@@ -96,5 +96,5 @@ window.addEventListener('load', () => {
     }
 
     loader.style.display = "none";
-  }, 4000);
+  }, 3000);
 });
