@@ -6,8 +6,10 @@
 html,
 body {
   background-color: #000;
-  overflow-x: hidden;
+  overflow-x: hidden!important;
+  scroll-behavior: smooth;
   font-size: 9px;
+  transition: smooth;
 }
 
 @font-face {
@@ -19,7 +21,20 @@ body {
   font-family: 'BrunoAce';
   src: url('../font/BrunoAce-Regular.ttf') format('truetype');
 }
-
+#loaderr{
+  width: 100vw;
+  height: 100vh;
+    background-size: 40vmin;
+    background-color: black;
+  position: fixed;
+  background-image: url(../image/loader.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  display: block;
+}
 .navbar {
   padding: 3em;
 }
@@ -49,7 +64,7 @@ body {
 
 .hero-container {
   z-index: 2;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -66,6 +81,10 @@ body {
   margin: auto;
   animation: slide-in 1s ease-in-out;
   transform: translate(15%, 60%);
+  animation-delay: 4s;
+  position: static;
+  bottom: 30vh;
+  z-index: 100;
 }
 
 .hero-images {
@@ -75,24 +94,27 @@ body {
 
 .hero-images img {
   z-index: 2;
-  width: 80vh;
-  height: 80vh;
+  width: 90vh;
+  height: 90vh;
 }
 
 .hero-img-1 {
   transform: translate(100%, 10%);
   animation: robo-slide-in1 1s ease-in-out;
+  animation-delay: 4s;
 }
 
 .hero-img-2 {
   transform: translate(-60%, 10%);
   animation: robo-slide-in2 1s ease-in-out;
+  animation-delay: 4s;
 }
 
 .ellipse {
   z-index: 1;
   position: absolute;
   width: 100%;
+  overflow-x: hidden;
   height: 700px;
   border-radius: 50%;
   background: radial-gradient(50% 50% at 50% 50%, rgb(0, 50, 151) 0%, rgba(0, 50, 151, 0) 92.71%);
@@ -160,7 +182,7 @@ body {
 }
 
 ::-webkit-scrollbar{
-  width: 8px;
+  width: 0px;
   background-color: transparent;
 }
 ::-webkit-scrollbar-button{
@@ -608,7 +630,6 @@ body {
   height: 100%;
   width: 100%;
   background: linear-gradient(black, transparent 10%, transparent 90%, black);
-  pointer-events: none; /* So it doesn't interfere with slider interaction */
 }
 
 .slider {
@@ -651,10 +672,10 @@ body {
 
 /* contact */
 .contact {
-  margin: 0 20% 0 20%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   flex-direction: column;
   padding: 4em;
   background-color: transparent;
@@ -673,7 +694,7 @@ body {
   color: #176bcf;
 }
 
-.contact_content p {
+.content-detail p {
   font-family: 'BrunoAce', sans-serif;
   padding: 1em;
   font-size: 2em;
@@ -696,7 +717,65 @@ body {
   text-decoration: none;
   padding: .6em 1.5em;
 }
+.contact-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8em;
+  padding: 0 3em;
+  z-index: 100;
+}
+.contact-info .contact-detail,
+.contact-info .contact-form{
+  min-width: 50%;
+  overflow: hidden;
+}
+form {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
 
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-family: BrunoAce;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  background-color:  rgba(255, 255, 255, 0.4);;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  margin-top: 5px;
+}
+::placeholder{
+  color: white;
+}
+button {
+  font-family: 'BrunoAce', sans-serif;
+  color: white;
+  background-color: #176acf85;
+  font-size: 2em;
+  text-decoration: none;
+  padding: .6em 1.5em;
+  cursor: pointer;
+  border-radius: 3em;
+  border: none;
+}
 @-webkit-keyframes scroll {
   0% {
     transform: translateY(0);
@@ -757,7 +836,42 @@ body {
     transform: translate(100%, 10%);
   }
 }
+@keyframes robo-slide-in1xsmall {
+  0% {
+    transform: translate(-100%, 10%);
+  }
 
+  100% {
+    transform: translate(-120%, 10%);
+  }
+}
+@keyframes robo-slide-in1small {
+  0% {
+    transform: translate(-100%, 10%);
+  }
+
+  100% {
+    transform: translate(-120%, 10%);
+  }
+}
+@keyframes robo-slide-inmid {
+  0% {
+    transform: translate(-50%, 10%);
+  }
+
+  100% {
+    transform:  translate(-90%, 10%);
+  }
+}
+@keyframes robo-slide-ilnmid {
+  0% {
+    transform: translate(-50%, 10%);
+  }
+
+  100% {
+    transform: translate(-110%, 10%);
+  }
+}
 @keyframes robo-slide-in2 {
   0% {
     transform: translate(10%, 10%);
@@ -864,6 +978,18 @@ body {
   .timespan img {
     scale: .6;
   }
+  .ellipse{
+    transform: translateX(-30%);
+    width: 80%;
+  }
+  .hero-img-2 {
+    transform: translate(-110%, 10%);
+    animation: robo-slide-ilnmid 1s ease;
+    animation-delay: 4s;
+}
+.ellipse2{
+  transform: translate(40%, 70%);
+}
 }
 
 
@@ -927,10 +1053,23 @@ body {
     font-size: 3.5px;
     padding-left: 0em;
   }
-
+  .contact-info{
+    flex-direction: column;
+  }
   .contact_content {
     font-size: 4.5px;
   }
+  .hero-img-2 {
+    transform: translate(-90%, 10%);
+    animation: robo-slide-inmid 1s ease;
+    animation-delay: 4s;
+}
+.ellipse{
+  display: none;
+}
+.ellipse2{
+  transform: translate(40%, 70%);
+}
 }
 
 @media only screen and (max-width: 470px) {
@@ -942,6 +1081,7 @@ body {
 
   .merch {
     font-size: 4.5px;
+    height: 33em;
   }
 
   .merch_button {
@@ -957,9 +1097,23 @@ body {
     padding-left: 0em;
   }
 
-  .contact_content {
-    font-size: 3.7px;
+  .contact-info {
+    font-size: 6px;
   }
+  .contact-info{
+    flex-direction: column;
+  }
+  .hero-img-2 {
+    transform: translate(-120%, 10%);
+    animation: robo-slide-in1small 1s ease;
+    animation-delay: 4s;
+}
+label{
+  font-size: 1.6em;
+}
+.ellipse{
+  display: none;
+}
 }
 
 @media only screen and (max-width: 400px) {
@@ -971,6 +1125,7 @@ body {
 
   .merch {
     font-size: 3.6px;
+    height: 33em;
   }
 
   .merch_button {
@@ -986,7 +1141,18 @@ body {
     padding-left: 0em;
   }
 
-  .contact_content {
+  .contact_info {
     font-size: 3px;
   }
+  .contact-info{
+    flex-direction: column;
+  }
+  .hero-img-2 {
+    animation: robo-slide-in1xsmall 1s ease;
+    transform: translate(-120%, 10%);
+    animation-delay: 4s;
+}
+.ellipse{
+  display: none;
+}
 }

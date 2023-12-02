@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'DaMiOne';
+    src: url('../font/DaMiOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BrunoAce';
+    src: url('../font/BrunoAce-Regular.ttf') format('truetype');
+}
+*{
+    line-height: 25px;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-button{
+    display: none;
+  }
+  ::-webkit-scrollbar-corner{
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: #131313;
+  }
+  ::-webkit-scrollbar-thumb{
+    background:linear-gradient(#176bcf,#0ec4dd);
+    border-radius: 20px;
+    width: 6px;
+  }
+  #loaderr{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    background-image: url(../image/loader.gif);
+    background-position: center center;
+    background-size: 40vmin;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    display: block;
+  }
+html,
+body {
+    overflow-x: hidden;
+    padding: 0 1.4em 0 1.4em;
+    margin: 0;
+    background-color: black;
+    font-size: 15px;
+}
+.navbar {
+    padding: 3em;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+  }
+  .nav-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .7em 3em;
+    color: white;
+    text-decoration: none;
+    font-family: BrunoAce;
+    font-size: 1.4em;
+  }
+  
+  .nav-home {
+    border: solid white 1.5px;
+    border-radius: 40px;
+  }
+.top_event_content{
+    background-image: url(../image/tenor.gif);
+    padding: 1em;
+    background-size:contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+h1 {
+    color: transparent;
+    font-weight: 1000;
+    font-size: 6em;
+    text-align: center;    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: BrunoAce;
+    line-height: normal;
+}
+header .upper_p {
+    font-size: 2.5em;
+    -webkit-text-stroke: white;
+    -webkit-text-stroke-width: 0.1px;
+    font-weight: 1000;
+    color: transparent;
+    text-align: center;
+}
+
+main .event-details {
+    font-size: 1.4em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+main h2 {
+    font-size: 2.5em;
+    color: white;
+    font-weight: 600;
+    font-family: BrunoAce;
+}
+.how-to-participate li,
+main p {
+    font-size: 1.4em;
+    color: white;
+}
+.how-to-participate li strong {
+    font-weight: 600;
+    font-family: BrunoAce;
+    margin-right: .5em;
+}
+
+
+.event-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.event-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 15px;
+    width: 600px;
+    transition: transform 0.3s ease-in-out;
+}
+.event-card:hover {
+    transform: scale(1.05);
+}
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.event-info {
+    padding: 15px;
+}
+.event-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: BrunoAce;
+    color: white;
+}
+.event-details {
+    color: #555;
+    margin-bottom: 15px;
+}
+.event-timing {
+    font-style: italic;
+    color: #888;
+}
+
+@media (max-width:500px){
+    html,body{
+        font-size: 10px;
+    }
+    .top_event_content{
+        font-size: 6px;
+    }
+}

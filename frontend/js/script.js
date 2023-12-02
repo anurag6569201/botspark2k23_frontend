@@ -1,3 +1,5 @@
+
+
 (function ($) {
   $(function () {
     $(window).on("scroll", function () {
@@ -71,23 +73,28 @@
   });
 })(jQuery);
 
-window.addEventListener("scroll", function () {
-  var element = document.getElementById("timeline-card");
-  var scrollPosition = window.scrollY || window.pageYOffset;
-
-  var opacity = 1 - scrollPosition / 500;
-
-  element.style.opacity = opacity > 0 ? opacity : 0;
-});
 
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
   "--marquee-elements-displayed"
 );
 const marqueeContent = document.querySelector("ul.marquee-content");
-
-root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
 for (let i = 0; i < marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
+
+
+// loader
+const loader = document.getElementById("loaderr");
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    var isWebkit = 'WebkitAppearance' in document.documentElement.style;
+    if (isWebkit) {
+      var styleElement = document.createElement('style');
+      styleElement.textContent = "::-webkit-scrollbar { width: 8px; }";
+      document.head.appendChild(styleElement);
+    }
+
+    loader.style.display = "none";
+  }, 4000);
+});

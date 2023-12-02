@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotSpark - State-level Robofest</title>
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+
+<body>
+    <div id="loaderr"></div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="nav-options nav-home"><a href="../index.html">Home</a></li>
+            <li class="nav-options nav-events"><a href="event.html">Events</a></li>
+            <li class="nav-options nav-team"><a href="team.html">Our Team</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="top_event_content">
+            <h1>GET-ROBOFIED BotSpark</h1>
+            <p class="upper_p">State-level Robofest by TARS-IIIT Bh</p>
+        </div>
+
+        <main>
+
+            <div class="event-details">
+                <span>Date: January 13th - 14th, 2023</span>
+                <span>Time: [Timing]</span>
+            </div>
+
+            <h2>About BotSpark</h2>
+            <p>Get ready for the ultimate robotic showdown! BotSpark is the first-ever State-level Robofest brought to
+                you by TARS-IIIT Bh, in collaboration with the Cultural Society and Mess Society. Thriving over 4
+                exciting robotics events, BotSpark is your chance to showcase your skills, overcome challenges, and win
+                exciting cash prizes in both technical and non-technical domains.</p>
+
+
+            <div class="how-to-participate">
+                <h2>How to Participate</h2>
+                <ol>
+                    <li><strong>Registration :</strong> Click [here] to register for the event.</li>
+                    <li><strong>Team Formation :</strong> Form your team of tech enthusiasts.</li>
+                    <li><strong>Prepare :</strong> Brush up on your robotic skills and get ready for the challenges.</li>
+                    <li><strong>Showcase :</strong> Display your robo-skills at BotSpark 2023!</li>
+                </ol>
+            </div>
+
+        </main>
+    </header>
+
+    <div class="event-container">
+        <!-- Event 1: ROBOTHON -->
+        <div class="event-card">
+            <img src="../image/eventrobothon.png" alt="ROBOTHON">
+            <div class="event-info">
+                <div class="event-heading">ROBOTHON</div>
+                <div class="event-details">Details about ROBOTHON event.</div>
+                <div class="event-timing">Timing: 13th JAN - 14th JAN</div>
+                <div class="event-timing">Prize Pool: $XXXX</div>
+            </div>
+        </div>
+
+        <!-- Event 2: IDEATHON -->
+        <div class="event-card">
+            <img src="../image/eventideathon.png" alt="IDEATHON">
+            <div class="event-info">
+                <div class="event-heading">IDEATHON</div>
+                <div class="event-details">Details about IDEATHON event.</div>
+                <div class="event-timing">Timing: 13th JAN - 14th JAN</div>
+                <div class="event-timing">Prize Pool: $XXXX</div>
+            </div>
+        </div>
+
+        <!-- Event 3: ARDUINO-ASSEMBLY -->
+        <div class="event-card">
+            <img src="../image/eventarduino.png" alt="ARDUINO-ASSEMBLY">
+            <div class="event-info">
+                <div class="event-heading">ARDUINO-ASSEMBLY</div>
+                <div class="event-details">Details about ARDUINO-ASSEMBLY event.</div>
+                <div class="event-timing">Timing: 13th JAN - 14th JAN</div>
+                <div class="event-timing">Prize Pool: $XXXX</div>
+            </div>
+        </div>
+
+        <!-- Event 4: ROBO-RACE -->
+        <div class="event-card">
+            <img src="../image/eventroborace.png" alt="ROBO-RACE">
+            <div class="event-info">
+                <div class="event-heading">ROBO-RACE</div>
+                <div class="event-details">Details about ROBO-RACE event.</div>
+                <div class="event-timing">Timing: 13th JAN - 14th JAN</div>
+                <div class="event-timing">Prize Pool: $XXXX</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    const loader = document.getElementById("loaderr");
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    var isWebkit = 'WebkitAppearance' in document.documentElement.style;
+    if (isWebkit) {
+      var styleElement = document.createElement('style');
+      styleElement.textContent = "::-webkit-scrollbar { width: 8px; }";
+      document.head.appendChild(styleElement);
+    }
+
+    loader.style.display = "none";
+  }, 4000);
+});
+</script>
+</html>
