@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Botspark 2k24</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/light-box.css">
 </head>
 
 <body>
@@ -273,10 +274,14 @@
       </div>
       <div class="merch_image">
         <div class="merch_image1">
-          <img src="image/back.jpg" alt="" />
+          <a href="image/back.jpg" data-lightbox="Back-merch" data-title="Back-merch">
+            <img src="image/back.jpg" alt="" />
+          </a>
         </div>
         <div class="merch_image1">
-          <img src="image/front.jpg" alt="" />
+          <a href="image/back.jpg" data-lightbox="front-merch" data-title="Front-merch">
+            <img src="image/front.jpg" alt="" />
+          </a>
         </div>
       </div>
     </div>
@@ -389,4 +394,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/light-box.js"></script>
 </html>
