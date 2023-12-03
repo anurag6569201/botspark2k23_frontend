@@ -158,6 +158,82 @@ body {
   }
 }
 
+.about-iiit {
+  display: flex;
+  padding: 2em;
+  height: fit-content;
+  justify-content: space-around;
+}
+
+.about-iiit img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+.about-iiit-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 1em;
+  color: white;
+}
+
+.about-iiit-content span {
+  font-family: DaMiOne;
+  font-size: 5em;
+  color: white;
+}
+
+.about-iiit-content p {
+  font-family: BrunoAce;
+  font-size: 2em;
+  padding: 1em;
+  word-spacing: 3px;
+}
+
+.about-tars {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2em;
+  height: fit-content;
+  justify-content: space-around;
+}
+
+.about-tars img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-tars-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 1em;
+  color: white;
+}
+
+.about-tars-content span {
+  font-family: DaMiOne;
+  font-size: 5em;
+  color: white;
+}
+
+.about-tars-content p {
+  font-family: BrunoAce;
+  font-size: 2em;
+  padding: 1em;
+  word-spacing: 3px;
+}
+
 .title-scroll-container {
   z-index: 2;
   margin-right: -10px;
@@ -168,6 +244,7 @@ body {
 }
 
 .title-scroll-container2 {
+  z-index: 2;
   margin-right: -10px;
   position: relative;
   display: flex;
@@ -672,12 +749,8 @@ body {
 
 /* contact */
 .contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   flex-direction: column;
-  padding: 4em;
   background-color: transparent;
 }
 
@@ -717,6 +790,7 @@ body {
   text-decoration: none;
   padding: .6em 1.5em;
 }
+
 .contact-info{
   display: flex;
   align-items: center;
@@ -1079,6 +1153,38 @@ button {
     font-size: 4.5px;
   }
 
+  .about-iiit {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-iiit img {
+    width: 80%;
+    border-radius: 20%;
+    margin-bottom: 5px;
+  }
+
+  .about-iiit-content {
+    width: 90%;
+  }
+  .about-tars {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-tars img {
+    width: 50%;
+    height: 50%;
+    border-radius: 20%;
+    margin-bottom: 5px;
+  }
+
+  .about-tars-content {
+    width: 90%;
+  }
+
   .merch {
     font-size: 4.5px;
     height: 33em;
@@ -1110,47 +1216,6 @@ button {
 }
 label{
   font-size: 1.6em;
-}
-.ellipse{
-  display: none;
-}
-}
-
-@media only screen and (max-width: 400px) {
-
-  html,
-  body {
-    font-size: 3.6px;
-  }
-
-  .merch {
-    font-size: 3.6px;
-    height: 33em;
-  }
-
-  .merch_button {
-    font-size: 4px;
-  }
-
-  .sponser_image {
-    font-size: 3px;
-  }
-
-  .sponser_content {
-    font-size: 2.2px;
-    padding-left: 0em;
-  }
-
-  .contact_info {
-    font-size: 3px;
-  }
-  .contact-info{
-    flex-direction: column;
-  }
-  .hero-img-2 {
-    animation: robo-slide-in1xsmall 1s ease;
-    transform: translate(-120%, 10%);
-    animation-delay: 4s;
 }
 .ellipse{
   display: none;
