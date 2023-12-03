@@ -81,7 +81,6 @@ body {
   margin: auto;
   animation: slide-in 1s ease-in-out;
   transform: translate(15%, 60%);
-  animation-delay: 4s;
   position: static;
   bottom: 30vh;
   z-index: 100;
@@ -101,13 +100,11 @@ body {
 .hero-img-1 {
   transform: translate(100%, 10%);
   animation: robo-slide-in1 1s ease-in-out;
-  animation-delay: 4s;
 }
 
 .hero-img-2 {
   transform: translate(-60%, 10%);
   animation: robo-slide-in2 1s ease-in-out;
-  animation-delay: 4s;
 }
 
 .ellipse {
@@ -244,7 +241,6 @@ body {
 }
 
 .title-scroll-container2 {
-  z-index: 2;
   margin-right: -10px;
   position: relative;
   display: flex;
@@ -633,12 +629,14 @@ body {
   position: absolute;
   bottom: 0em;
   left: 0;
+  z-index: 100;
 }
 
 .merch_image1:nth-child(1) img {
   width: 55%;
   position: absolute;
   top: 0em;
+  z-index: 100;
   right: 0;
 }
 
@@ -749,8 +747,12 @@ body {
 
 /* contact */
 .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   flex-direction: column;
+  padding: 4em;
   background-color: transparent;
 }
 
@@ -790,7 +792,6 @@ body {
   text-decoration: none;
   padding: .6em 1.5em;
 }
-
 .contact-info{
   display: flex;
   align-items: center;
@@ -967,6 +968,9 @@ button {
   .dashes .timeline-card_point:nth-child(n+5) {
     display: none;
   }
+  .merch{
+    height: 35em;
+  }
 }
 
 @media only screen and (max-width: 979px) {
@@ -1039,6 +1043,7 @@ button {
 
   .merch {
     font-size: 7px;
+    height: 30em;
   }
 
   .sponser {
@@ -1059,7 +1064,7 @@ button {
   .hero-img-2 {
     transform: translate(-110%, 10%);
     animation: robo-slide-ilnmid 1s ease;
-    animation-delay: 4s;
+
 }
 .ellipse2{
   transform: translate(40%, 70%);
@@ -1108,17 +1113,37 @@ button {
   }
 
   .timeline_line {
+    left:3.5em;
     width: 0.7em;
   }
 
   .merch {
     font-size: 5px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: auto;
   }
-
+  .merch_content, .merch_image{
+    width: 90%;
+  }
   .merch_button {
     font-size: 5px;
+    position: static;
   }
-
+  .merch_image{
+    height: 40em;
+    margin-left: 0;
+    width: 60%;
+  }
+  .merch_image1:nth-child(2) img,
+  .merch_image1:nth-child(1) img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+  }
   .sponser_image {
     font-size: 5px;
   }
@@ -1136,7 +1161,7 @@ button {
   .hero-img-2 {
     transform: translate(-90%, 10%);
     animation: robo-slide-inmid 1s ease;
-    animation-delay: 4s;
+
 }
 .ellipse{
   display: none;
@@ -1152,7 +1177,6 @@ button {
   body {
     font-size: 4.5px;
   }
-
   .about-iiit {
     width: 100%;
     flex-direction: column;
@@ -1187,7 +1211,6 @@ button {
 
   .merch {
     font-size: 4.5px;
-    height: 33em;
   }
 
   .merch_button {
@@ -1212,10 +1235,50 @@ button {
   .hero-img-2 {
     transform: translate(-120%, 10%);
     animation: robo-slide-in1small 1s ease;
-    animation-delay: 4s;
+
 }
 label{
   font-size: 1.6em;
+}
+.ellipse{
+  display: none;
+}
+}
+
+@media only screen and (max-width: 400px) {
+
+  html,
+  body {
+    font-size: 3.6px;
+  }
+
+  .merch {
+    font-size: 3.6px;
+  }
+
+  .merch_button {
+    font-size: 4px;
+  }
+
+  .sponser_image {
+    font-size: 3px;
+  }
+
+  .sponser_content {
+    font-size: 2.2px;
+    padding-left: 0em;
+  }
+
+  .contact_info {
+    font-size: 3px;
+  }
+  .contact-info{
+    flex-direction: column;
+  }
+  .hero-img-2 {
+    animation: robo-slide-in1xsmall 1s ease;
+    transform: translate(-120%, 10%);
+
 }
 .ellipse{
   display: none;
