@@ -81,7 +81,6 @@ body {
   margin: auto;
   animation: slide-in 1s ease-in-out;
   transform: translate(15%, 60%);
-  animation-delay: 4s;
   position: static;
   bottom: 30vh;
   z-index: 100;
@@ -101,13 +100,11 @@ body {
 .hero-img-1 {
   transform: translate(100%, 10%);
   animation: robo-slide-in1 1s ease-in-out;
-  animation-delay: 4s;
 }
 
 .hero-img-2 {
   transform: translate(-60%, 10%);
   animation: robo-slide-in2 1s ease-in-out;
-  animation-delay: 4s;
 }
 
 .ellipse {
@@ -1067,7 +1064,7 @@ button {
   .hero-img-2 {
     transform: translate(-110%, 10%);
     animation: robo-slide-ilnmid 1s ease;
-    animation-delay: 4s;
+
 }
 .ellipse2{
   transform: translate(40%, 70%);
@@ -1164,7 +1161,7 @@ button {
   .hero-img-2 {
     transform: translate(-90%, 10%);
     animation: robo-slide-inmid 1s ease;
-    animation-delay: 4s;
+
 }
 .ellipse{
   display: none;
@@ -1238,7 +1235,7 @@ button {
   .hero-img-2 {
     transform: translate(-120%, 10%);
     animation: robo-slide-in1small 1s ease;
-    animation-delay: 4s;
+
 }
 label{
   font-size: 1.6em;
@@ -1281,7 +1278,7 @@ label{
   .hero-img-2 {
     animation: robo-slide-in1xsmall 1s ease;
     transform: translate(-120%, 10%);
-    animation-delay: 4s;
+
 }
 .ellipse{
   display: none;
